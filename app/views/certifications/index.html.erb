@@ -1,0 +1,20 @@
+<script>
+  $(function () {
+    $('#certificationsNav').addClass('active');
+  });
+</script>
+<%= javascript_include_tag "certifications.js" %> 
+<%= stylesheet_link_tag "certifications.css", media: "all" %>
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('certifications.index.title') %></h1>
+
+<div class="card search-card">
+  <div class="card-body">
+    <%= render 'search_form' %>
+  </div>
+</div>
+
+<%= render 'table' %>
+
+<div id="certification-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>

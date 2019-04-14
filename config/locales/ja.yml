@@ -1,0 +1,37 @@
+ja:
+  dictionary:
+    title:
+      create: "新規作成"
+      update: "更新"
+      destory:
+        confirm: "削除確認"
+
+    message:
+      destory:
+        confirm: "削除しますか？"
+
+    button:
+      create: "新規作成"
+      search: "検索"
+      clear: "クリア"
+      update: "更新"
+      destory: "削除"
+      cancel: "キャンセル"
+
+  time:
+    formats:
+      default: ! "%Y-%m-%d %H:%M:%S"
+
+  activerecord:
+    models:
+      certification: "資格"
+    attributes:
+      certification:
+        id: "ID"
+        name: "資格名"
+        created_at: "登録日時"
+        updated_at: "更新日時"
+  
+  certifications:
+    index:
+      title: "資格マスタ"

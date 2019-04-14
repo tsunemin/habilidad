@@ -1,0 +1,26 @@
+<%= javascript_include_tag "certifications.js" %> 
+<%= search_form_for(@q, remote: true) do |f| %>
+<div class="form-group">
+    <%= f.label :name_cont, Certification.human_attribute_name(:name), class: "font-weight-bold" %>
+    <%= f.search_field :name_cont, class: "form-control" %>
+</div>
+<div class="form-group">
+    <%= f.label :created_at_gteq, Certification.human_attribute_name(:created_at), class: "font-weight-bold" %>
+    <div class="input-group">
+        <%= f.text_field :created_at_gteq, id: "created_at_gteq", value: nil, class: "form-control datetimepicker-input", data: { target: '#created_at_gteq', toggle: 'datetimepicker' } %>
+        <p class="text-center">〜</p>
+        <%= f.text_field :created_at_lteq, id: "created_at_lteq", class: "form-control datetimepicker-input", data: { target: '#created_at_lteq', toggle: 'datetimepicker'} %>
+    </div>
+</div>
+<div class="form-group">
+    <%= f.label :updated_at_gteq, Certification.human_attribute_name(:updated_at), class: "font-weight-bold" %>
+    <div class="input-group">
+        <%= f.text_field :updated_at_gteq, id: "updated_at_gteq", class: "form-control datetimepicker-input", data: { target: '#updated_at_gteq', toggle: 'datetimepicker'} %>
+        <p class="text-center">〜</p>
+        <%= f.text_field :updated_at_lteq, id: "updated_at_lteq", class: "form-control datetimepicker-input", data: { target: '#updated_at_lteq', toggle: 'datetimepicker'} %>
+    </div>
+</div>
+<%= button_tag sanitize('<i class="fa fa-search"></i> ') + t('dictionary.button.search'), type: "submit", class: "btn btn-info" %>
+<%= link_to sanitize('<i class="fa fa-times"></i> ') + t('dictionary.button.clear'), '#', class: "btn btn-secondary btn-clear" %>
+<%= link_to sanitize('<i class="fa fa-plus"></i> ') + t('dictionary.button.create'), new_certification_path, remote: true, class: "btn btn-primary" %>
+<% end %>
