@@ -30,6 +30,25 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  dictionary:
+    title:
+      create: "create"
+      update: "update"
+      destory:
+        confirm: "Are you sure?"
+
+    message:
+      destory:
+        confirm: "Are you sure?"
+  
+    button:
+      create: "create"
+      search: "search"
+      clear: "clear"
+      update: "update"
+      destory: "destory"
+      cancel: "cancel"
+
   time:
     formats:
       default: ! "%Y-%m-%d %H:%M:%S"
@@ -43,3 +62,7 @@ en:
         name: "name"
         created_at: "created_at"
         updated_at: "updated_at"
+
+  certifications:
+    index:
+      title: "certifications master"
