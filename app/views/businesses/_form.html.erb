@@ -1,8 +1,8 @@
 <div class="modal-dialog" role="document">
   <div class="modal-content">
-    <%= form_with(model: @certification, remote: true) do |form| %>
+      <%= form_with(model: @business, remote: true) do |form| %>
       <div class="modal-header">
-        <% if @certification.id? %>
+        <% if @business.id? %>
           <h5 class="modal-title"><%= t('dictionary.title.update') %></h5>
         <% else %>
           <h5 class="modal-title"><%= t('dictionary.title.create') %></h5>
@@ -12,26 +12,26 @@
         </button>
       </div>
       <div class="modal-body">
-        <div id="certifications_errors"></div>
+        <div id="businesses_errors"></div>
         <div class="form-group field">
           <%= form.label :name, class: "form-control-label" %>
           <%= form.text_field :name, class: "form-control" %>
         </div>
-        <% if @certification.id? %>
+        <% if @business.id? %>
           <div class="form-group field">
-            <%= form.label :created_at , class: "form-control-label" %>
-            <%= form.label l(@certification.created_at, format: :default), class: "form-control form-timestamp" %>
+            <%= form.label :create_at, class: "form-control-label" %>
+            <%= form.label l(@business.created_at, format: :default), class: "form-control" %>
           </div>
           <div class="form-group field">
-            <%= form.label :updated_at , class: "form-control-label" %>
-            <%= form.label l(@certification.updated_at, format: :default), class: "form-control form-timestamp" %>
+            <%= form.label :updated_at, class: "form-control-label" %>
+            <%= form.label l(@business.updated_at, format: :default), class: "form-control" %>
           </div>
         <% end %>
       </div>
       <div class="modal-footer actions">
-        <% if @certification.id? %>
+        <% if @business.id? %>
           <%= button_tag sanitize('<i class="fa fa-arrow-up"></i> ') + t('dictionary.button.update'), type: "submit", class: "btn btn-primary" %>
-          <%= link_to sanitize('<i class="fa fa-ban"></i> ') + t('dictionary.button.destory'), @user, method: :delete, title: t('dictionary.title.destory.confirm'), data: { confirm: t('dictionary.message.destory.confirm'), commit: t('dictionary.button.destory'), cancel: t('dictionary.button.cancel') }, class: "btn btn-danger" %>
+          <%= link_to sanitize('<i class="fa fa-ban"></i> ') + t('dictionary.button.destory'), method: delete, title: t('dictionary.title.destory.confirm'), data: { confirm: t('dictionary.message.destory.confirm'), commit: t('dictionary.button.destory'), cancel: t('dictionary.button.cancel') }, class: "btn btn-danger" %>
         <% else %>
           <%= button_tag sanitize('<i class="fa fa-plus"></i> ') + t('dictionary.button.create'), type: "submit", class: "btn btn-primary" %>
         <% end %>

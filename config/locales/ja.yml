@@ -25,13 +25,22 @@ ja:
   activerecord:
     models:
       certification: "資格"
+      business: "業種"
     attributes:
       certification:
         id: "ID"
         name: "資格名"
         created_at: "登録日時"
         updated_at: "更新日時"
+      business:
+        id: "ID"
+        name: "業種名"
+        created_at: "登録日時"
+        updated_at: "更新日時"
   
   certifications:
     index:
-      title: "資格マスタ"
+      title: "資格"
+  businesses:
+    index:
+      title: "業種"

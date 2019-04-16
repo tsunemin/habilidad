@@ -1,6 +1,6 @@
 <% if @status == 'success' %>
-    $("#certification-table").html('<%= j(render 'table') %>')
+    $('#certifications_table').html('<%= j(render 'table') %>');
+    $('#certifications_modal').modal('hide');
 <%  elsif @status == 'fail' %>
-    alert('error!');
+    $('#certifications_errors').html('<%= j(render 'layouts/error_messages', model: @certification) %>');
 <% end %>
-$("#certification-modal").modal("hide");

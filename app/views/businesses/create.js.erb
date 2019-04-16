@@ -1,0 +1,6 @@
+<% if @status == 'success' %>
+    $('#businesses_table').html('<%= j(render 'table') %>');
+    $('#businesses_modal').modal('hide');
+<% elsif @status == 'fail' %>
+    $('#businesses_errors').html('<%= j(render 'layouts/error_messages', model: @certification) %>');
+<% end %>

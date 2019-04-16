@@ -1,5 +1,5 @@
 $(function () {
-    $('#certifications_nav').addClass('active');   
+    $('#businesses_nav').addClass('active');
 });
 
 $(function () {

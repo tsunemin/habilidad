@@ -14,7 +14,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
-            <li id="certificationsNav" class="nav-item">
+            <li id="businesses_nav" class="nav-item">
+                <%= link_to t('businesses.index.title'), businesses_path, class: "nav-link" %>
+            </li>
+            <li id="certifications_nav" class="nav-item">
                 <%= link_to t('certifications.index.title'), certifications_path, class: "nav-link" %>
             </li>
         </ul>

@@ -56,13 +56,23 @@ en:
   activerecord:
     models:
       certification: "certification"
+      business: "business"
     attributes:
       certification:
         id: "id"
         name: "name"
         created_at: "created_at"
         updated_at: "updated_at"
+      business:
+        id: "id"
+        name: "name"
+        created_at: "created_at"
+        updated_at: "updated_at"
+
 
   certifications:
     index:
       title: "certifications master"
+  businesses:
+    index:
+      title: "businesses master"
