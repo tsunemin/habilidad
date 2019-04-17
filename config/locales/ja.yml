@@ -7,6 +7,10 @@ ja:
         confirm: "削除確認"
 
     message:
+      create:
+        complete: "登録しました"
+      update:
+        complete: "更新しました"
       destory:
         confirm: "削除しますか？"
 

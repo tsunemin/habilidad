@@ -38,9 +38,13 @@ en:
         confirm: "Are you sure?"
 
     message:
+      create:
+        complete: "Your registration was completed."
+      update:
+        complete: "Update was completed."
       destory:
         confirm: "Are you sure?"
-  
+
     button:
       create: "create"
       search: "search"

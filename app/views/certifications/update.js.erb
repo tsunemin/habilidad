@@ -1,4 +1,5 @@
 <% if @status == 'success' %>
+    $('#alert_messages').html('<%= j(render 'layouts/alert_messages') %>');
     $('#certifications_table').html('<%= j(render 'table') %>');
     $('#certifications_modal').modal('hide');
 <%  elsif @status == 'fail' %>
