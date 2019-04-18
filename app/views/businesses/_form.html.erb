@@ -31,7 +31,7 @@
       <div class="modal-footer actions">
         <% if @business.id? %>
           <%= button_tag sanitize('<i class="fa fa-arrow-up"></i> ') + t('dictionary.button.update'), type: "submit", class: "btn btn-primary" %>
-          <%= link_to sanitize('<i class="fa fa-ban"></i> ') + t('dictionary.button.destory'), method: delete, title: t('dictionary.title.destory.confirm'), data: { confirm: t('dictionary.message.destory.confirm'), commit: t('dictionary.button.destory'), cancel: t('dictionary.button.cancel') }, class: "btn btn-danger" %>
+          <%= link_to sanitize('<i class="fa fa-ban"></i> ') + t('dictionary.button.destory'), @business, method: delete, title: t('dictionary.title.destory.confirm'), data: { confirm: t('dictionary.message.destory.confirm'), commit: t('dictionary.button.destory'), cancel: t('dictionary.button.cancel') }, class: "btn btn-danger" %>
         <% else %>
           <%= button_tag sanitize('<i class="fa fa-plus"></i> ') + t('dictionary.button.create'), type: "submit", class: "btn btn-primary" %>
         <% end %>

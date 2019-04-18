@@ -1,0 +1,12 @@
+<%= javascript_include_tag "clients.js" %>
+<%= stylesheet_link_tag "clients.css", media: "all" %>
+<h3>Clients</h3>
+<p id="notice"><%= notice %></p>
+<div class="card">
+  <div class="card-body">
+    <%= render 'search_form' %>
+  </div>
+</div>
+<%= render 'table' %>
+<div id="clients_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
