@@ -29,11 +29,14 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
+        @clients = Client.all
         format.html { redirect_to @client, notice: 'Client was successfully created.' }
         format.json { render :show, status: :created, location: @client }
+        format.js { @status = "success" }
       else
         format.html { render :new }
         format.json { render json: @client.errors, status: :unprocessable_entity }
+        format.js { @status = "fail" }
       end
     end
   end
@@ -43,11 +46,14 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update(client_params)
+        @clients = Client.all
         format.html { redirect_to @client, notice: 'Client was successfully updated.' }
         format.json { render :show, status: :ok, location: @client }
+        format.js { @status = "success" }
       else
         format.html { render :edit }
         format.json { render json: @client.errors, status: :unprocessable_entity }
+        format.js { @status = "fail" }
       end
     end
   end
@@ -70,6 +76,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.fetch(:client, {})
+      params.require(:client).permit(:name, :commercial_distribution)
     end
 end

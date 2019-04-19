@@ -1,0 +1,6 @@
+<% if @status == 'success' %>
+    $('#clients_table').html('<%= j(render 'table') %>');
+    $('#clients_modal').modal('hide');
+<% elsif @status == 'fail' %>
+    $('#clients_errors').html('<%= j(render 'layouts/error_messages', model: @client) %>');
+<% end %>

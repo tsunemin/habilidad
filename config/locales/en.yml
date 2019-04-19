@@ -61,6 +61,7 @@ en:
     models:
       certification: "certification"
       business: "business"
+      client: "client"
     attributes:
       certification:
         id: "id"
@@ -72,11 +73,19 @@ en:
         name: "name"
         created_at: "created_at"
         updated_at: "updated_at"
-
+      client:
+        id: "id"
+        name: "name"
+        commercial_distribution: "commercial_distribution"
+        created_at: "created_at"
+        updated_at: "updated_at"
 
   certifications:
     index:
-      title: "certifications master"
+      title: "certifications list"
   businesses:
     index:
-      title: "businesses master"
+      title: "businesses list"
+  clients:
+    index:
+      title: "clients list"

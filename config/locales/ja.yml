@@ -30,6 +30,7 @@ ja:
     models:
       certification: "資格"
       business: "業種"
+      client: "クライアント"
     attributes:
       certification:
         id: "ID"
@@ -41,6 +42,12 @@ ja:
         name: "業種名"
         created_at: "登録日時"
         updated_at: "更新日時"
+      client:
+        id: "ID"
+        name: "クライアント名"
+        commercial_distribution: "商流"
+        created_at: "登録日時"
+        updated_at: "更新日時"
   
   certifications:
     index:
@@ -48,3 +55,6 @@ ja:
   businesses:
     index:
       title: "業種"
+  clients:
+    index:
+      title: "クライアント"
