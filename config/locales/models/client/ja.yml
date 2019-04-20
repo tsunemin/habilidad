@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      client: "クライアント"
+    attributes:
+      client:
+        id: "ID"
+        name: "クライアント名"
+        commercial_distribution: "商流"
+        created_at: "登録日時"
+        updated_at: "更新日時"

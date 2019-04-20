@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      certification: "certification"
+    attributes:
+      certification:
+        id: "id"
+        name: "name"
+        created_at: "created_at"
+        updated_at: "updated_at"

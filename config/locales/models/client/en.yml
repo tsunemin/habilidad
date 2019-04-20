@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      client: "client"
+    attributes:
+      client:
+        id: "id"
+        name: "name"
+        commercial_distribution: "commercial_distribution"
+        created_at: "created_at"
+        updated_at: "updated_at"

@@ -1,0 +1,10 @@
+ja:
+ activerecord:
+    models:
+      business: "業種"
+    attributes:
+      business:
+        id: "ID"
+        name: "業種名"
+        created_at: "登録日時"
+        updated_at: "更新日時"
