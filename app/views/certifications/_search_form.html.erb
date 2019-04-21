@@ -1,4 +1,4 @@
-<%= javascript_include_tag "certifications.js" %> 
+<%= javascript_include_tag "views/certifications.js" %>
 <%= search_form_for(@q, remote: true) do |f| %>
 <div class="form-group">
     <%= f.label :name_cont, Certification.human_attribute_name(:name), class: "font-weight-bold" %>

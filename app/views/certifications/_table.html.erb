@@ -13,8 +13,10 @@
         <tr>
             <td><%= link_to certification.id, edit_certification_path(certification), remote: true %></td>
             <td><%= link_to certification.name, edit_certification_path(certification), remote: true %></td>
-            <td><%= link_to l(certification.created_at, format: :default), edit_certification_path(certification), remote: true %></td>
-            <td><%= link_to l(certification.updated_at, format: :default), edit_certification_path(certification), remote: true %></td>
+            <td><%= link_to l(certification.created_at, format: :default), edit_certification_path(certification), remote: true %>
+            </td>
+            <td><%= link_to l(certification.updated_at, format: :default), edit_certification_path(certification), remote: true %>
+            </td>
         </tr>
         <% end %>
     </tbody>

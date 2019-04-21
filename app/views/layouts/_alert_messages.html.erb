@@ -1,9 +1,11 @@
 <div class="alert alert-info alert-dismissible fade show" role="alert">
     <strong>INFO. </strong>
     <% if controller.action_name == "create" %>
-        <%= t('dictionary.message.create.complete') %>
+        <%= t('dictionary.message.create.complete',id: model.id) %>
     <% elsif controller.action_name == "update" %>
-        <%= t('dictionary.message.update.complete') %>
+        <%= t('dictionary.message.update.complete',id: model.id) %>
+    <% elsif controller.action_name == "destroy" %>
+        <%= t('dictionary.message.destroy.complete', id: model.id) %>
     <% end %>
     <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
         <span aria-hidden="true">&times;</span>

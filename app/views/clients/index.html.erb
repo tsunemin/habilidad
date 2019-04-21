@@ -1,8 +1,7 @@
-<%= javascript_include_tag "clients.js" %>
-<%= stylesheet_link_tag "clients.css", media: "all" %>
+<%= javascript_include_tag "views/clients.js" %>
+<%= stylesheet_link_tag "views/clients.css", media: "all" %>
 <div id="alert_messages"></div>
 <h3><%= t('clients.index.title') %></h3>
-<p id="notice"><%= notice %></p>
 <div class="card">
   <div class="card-body">
     <%= render 'search_form' %>
@@ -10,4 +9,3 @@
 </div>
 <%= render 'table' %>
 <div id="clients_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
-

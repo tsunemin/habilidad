@@ -1,4 +1,4 @@
-<%= javascript_include_tag "businesses.js" %> 
+<%= javascript_include_tag "views/businesses.js" %> 
 <%= search_form_for(@q, remote: true) do |f| %>
 <div class="form-group">
     <%= f.label :name_cont, Business.human_attribute_name(:name), class: "font-weight-bold" %>

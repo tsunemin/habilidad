@@ -1,0 +1,15 @@
+/** not display scrollbar */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.yield {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.text-primary {
+    color: #ff0018 !important;
+    font-weight: bold;
+}

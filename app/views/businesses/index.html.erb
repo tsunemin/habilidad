@@ -1,7 +1,7 @@
-<%= javascript_include_tag "businesses.js" %>
-<%= stylesheet_link_tag "businesses.css", media: "all" %>
+<%= javascript_include_tag "views/businesses.js" %>
+<%= stylesheet_link_tag "views/businesses.css", media: "all" %>
+<div id="alert_messages"></div>
 <h3><%= t('businesses.index.title') %></h3>
-<p id="notice"><%= notice %></p>
 <div class="card">
   <div class="card-body">
     <%= render 'search_form' %>

@@ -3,21 +3,22 @@ ja:
     title:
       create: "新規作成"
       update: "更新"
-      destory:
+      destroy:
         confirm: "削除確認"
     message:
       create:
-        complete: "登録しました"
+        complete: "登録しました(ID:%{id})"
       update:
-        complete: "更新しました"
-      destory:
+        complete: "更新しました(ID:%{id})"
+      destroy:
         confirm: "削除しますか？"
+        complete: "削除しました(ID:%{id})"
     button:
       create: "新規作成"
       search: "検索"
       clear: "クリア"
       update: "更新"
-      destory: "削除"
+      destroy: "削除"
       cancel: "キャンセル"
   time:
     formats:

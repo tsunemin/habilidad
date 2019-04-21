@@ -1,4 +1,5 @@
 <% if @status == 'success' %>
+    $('#alert_messages').html('<%= j(render 'layouts/alert_messages', model: @client) %>');
     $('#clients_table').html('<%= j(render 'table') %>');
     $('#clients_modal').modal('hide');
 <% elsif @status == 'fail' %>

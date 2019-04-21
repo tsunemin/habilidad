@@ -34,21 +34,22 @@ en:
     title:
       create: "create"
       update: "update"
-      destory:
+      destroy:
         confirm: "Are you sure?"
     message:
       create:
-        complete: "Your registration was completed."
+        complete: "Registration of ID:%{id} was completed."
       update:
-        complete: "Update was completed."
-      destory:
+        complete: "Updating ID:%{id} was completed."
+      destroy:
         confirm: "Are you sure?"
+        complete: "Destroying ID:%{id} was completed."
     button:
       create: "create"
       search: "search"
       clear: "clear"
       update: "update"
-      destory: "destory"
+      destroy: "destory"
       cancel: "cancel"
   time:
     formats:

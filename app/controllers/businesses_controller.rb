@@ -46,11 +46,14 @@ class BusinessesController < ApplicationController
   def update
     respond_to do |format|
       if @business.update(business_params)
+        @businesses = Business.all
         format.html { redirect_to @business, notice: 'Business was successfully updated.' }
         format.json { render :show, status: :ok, location: @business }
+        format.js { @status = "success" }
       else
         format.html { render :edit }
         format.json { render json: @business.errors, status: :unprocessable_entity }
+        format.js { @status = "fail" }
       end
     end
   end
@@ -59,9 +62,11 @@ class BusinessesController < ApplicationController
   # DELETE /businesses/1.json
   def destroy
     @business.destroy
+    @businesses = Business.all
     respond_to do |format|
       format.html { redirect_to businesses_url, notice: 'Business was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { }
     end
   end
 

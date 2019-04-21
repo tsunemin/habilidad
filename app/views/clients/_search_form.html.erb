@@ -1,3 +1,4 @@
+<%= javascript_include_tag "views/clients.js" %> 
 <%= search_form_for(@q, remote: true) do |f| %>
 <div class="form-group">
     <%= f.label :name_cont, Client.human_attribute_name(:name), class: "font-weight-bold" %>

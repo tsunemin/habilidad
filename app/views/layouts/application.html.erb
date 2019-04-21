@@ -8,12 +8,15 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <%= stylesheet_link_tag "commons/commons.css", media: "all" %>
+  <%= stylesheet_link_tag "commons/sticky-footer-navbar.css", media: "all" %>
 </head>
 
 <body>
   <%= render 'header' %>
   <div class="yield">
-      <%= yield %>
+    <%= yield %>
   </div>
   <%= render 'footer' %>
 </body>

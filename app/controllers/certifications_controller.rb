@@ -51,7 +51,6 @@ class CertificationsController < ApplicationController
         format.json { render :show, status: :ok, location: @certification }
         format.js { @status = "success" }
       else
-        @certifications = Certification.all
         format.html { render :edit }
         format.json { render json: @certification.errors, status: :unprocessable_entity }
         format.js { @status = "fail" }
@@ -63,9 +62,11 @@ class CertificationsController < ApplicationController
   # DELETE /certifications/1.json
   def destroy
     @certification.destroy
+    @certifications = Certification.all
     respond_to do |format|
       format.html { redirect_to certifications_url, notice: 'Certification was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { }
     end
   end
 
