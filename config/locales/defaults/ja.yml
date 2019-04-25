@@ -1,5 +1,11 @@
 ja:
+  application:
+    name: "habilidad"
+    header: "habilidad -skill sheet management system-"
   dictionary:
+    menu:
+      title:
+        admin: "管理者"
     title:
       create: "新規作成"
       update: "更新"

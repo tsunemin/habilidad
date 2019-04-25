@@ -1,5 +1,8 @@
 $(function () {
-    $('#clients_nav').addClass('active');
+    $('a').removeClass('dropdown-active');
+    $('.nav-link').removeClass('active');
+    $('#clients_nav').addClass('dropdown-active');
+    $('#dropdown_nav').addClass('active');
 });
 
 $(function () {

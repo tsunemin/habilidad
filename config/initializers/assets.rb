@@ -15,7 +15,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # if add new css or js exec this command.
 # bundle exec rake assets:clobber
 Rails.application.config.assets.precompile += %w( commons/commons.css )
-Rails.application.config.assets.precompile += %w( commons/sticky-footer-navbar.css )
+Rails.application.config.assets.precompile += %w( commons/header.css )
+Rails.application.config.assets.precompile += %w( commons/footer.css )
 Rails.application.config.assets.precompile += %w( views/certifications.css )
 Rails.application.config.assets.precompile += %w( views/certifications.js )
 Rails.application.config.assets.precompile += %w( views/businesses.css )

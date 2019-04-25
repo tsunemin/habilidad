@@ -30,7 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  application:
+    name: "habilidad"
+    header: "habilidad -skill sheet management system-"
   dictionary:
+    menu:
+      title:
+        admin: "admin"
     title:
       create: "create"
       update: "update"
