@@ -7,6 +7,12 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore bundler gems.(add)
+vendor/bundle
+
+# macOS(add)
+.DS_Store
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
