@@ -1,0 +1,8 @@
+en:
+  top:
+    index:
+      title: "businesses list"
+    message:
+      remember: "remember login info."
+      forget:
+        password: "forget password ?"

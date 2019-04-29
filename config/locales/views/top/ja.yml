@@ -1,0 +1,8 @@
+ja:
+  top:
+    index:
+      title: "TOP"
+    message:
+      remember: "ログイン情報を記憶する"
+      forget:
+        password: "パスワードをお忘れの方はこちら..."

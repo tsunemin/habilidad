@@ -1,0 +1,62 @@
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+.relative-next {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.relative-next > .card {
+    max-width: 350px;
+    padding: 20px 20px;
+    background-color: rgba(200, 200, 200, 0.7);
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.img-habilidad {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.use-fontawesome {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+#label_sign_in {
+    margin-bottom: 20px;
+}
+
+button.use-fontawesome.btn.btn-dark {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input#remember_me + label {
+    margin-bottom: initial;
+}
+
+.forget-password {
+    margin-top: 10px;
+    text-align: end;
+}

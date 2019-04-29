@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "views/top.css", media: "all" %>
+<div class="relative">
+    <%= video_tag "top.mp4", autoplay: "true", loop: "true", muted: "true" %>
+</div>
+<div class="relative-next">
+    <div class="card">
+        <form>
+            <p class="use-fontawesome small text-center">skillsheet management system</p>
+            <%= image_tag "habilidad-logo.png", class: "img-habilidad", size: "200x145", alt: "" %>
+            <h4 id="label_sign_in" class="use-fontawesome font-weight-normal text-center">please sign in</h4>
+            <input class="use-fontawesome form-control mb-2" placeholder="&#xf0e0; mail address">
+            <input type="password" class="use-fontawesome form-control" placeholder="&#xf13e;  password">
+            <div class="use-fontawesome checkbox mt-2 mb-1 small text-center">
+                <input id="remember_me" type="checkbox"> <label for="remember_me"><%= t('top.message.remember') %></label>
+            </div>
+            <button type="submit" class="use-fontawesome btn btn-dark"><i class="fa fa-sign-in"></i> sign in</button>
+        </form>
+        <div class="forget-password">
+            <%= link_to t('top.message.forget.password'), top_path, class: "use-fontawesome small" %>
+        </div>
+    </div>
+</div>

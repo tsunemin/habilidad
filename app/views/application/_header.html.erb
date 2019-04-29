@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag "commons/header.css", media: "all" %>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-    <span class="navbar-brand mb-0 h1"><%= t('application.name') %></span>
+    <span class="navbar-brand mb-0 h1"><%= link_to t('application.name'), top_path, class: "text-white" %></span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_nav"
         aria-controls="navbar_nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
