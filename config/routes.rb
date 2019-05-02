@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
     # top_controller
     get 'top', to: 'top#index'
+    get 'sign_on', to: 'top#sign_on'
+    post 'create_temp_user', to: 'top#create'
 
     # businesses_controller
     resources :businesses

@@ -1,32 +1,10 @@
-<style>
-.alert.alert-warning {
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 16px;
-    page-break-after: 20px;
-}
-
-.alert.alert-warning > ul {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    padding-left: 20px;
-}
-
-.alert.alert-warning > ul > li {
-    list-style-type: disc;
-    list-style-position: inside;
-}
-</style>
+<%= stylesheet_link_tag "commons/error_messages.css", media: "all" %>
 <% if model.errors.any? %>
-    <div class="alert alert-warning">
-        <ul>
-            <% model.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-        </ul>
-    </div>
+<div class="alert alert-warning">
+    <ul>
+        <% model.errors.full_messages.each do |message| %>
+        <li class="small"><%= message %></li>
+        <% end %>
+    </ul>
+</div>
 <% end %>

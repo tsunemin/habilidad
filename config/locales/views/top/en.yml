@@ -1,8 +1,35 @@
 en:
   top:
     index:
-      title: "businesses list"
+      title: "TOP"
+      form:
+        mail_address:
+          placeholder: "mail address"
+        password:
+          placeholder: "password"
+    sign_on:
+      title: "sign on"
+      form:
+        last_name:
+          label: "last name"
+          placeholder: "Doe"
+        first_name:
+          label: "first name"
+          placeholder: "John"
+        mail_address:
+          label: "mail address"
+          placeholder: "your.mail@example.com"
+        submit: "sign on"
+      complete:
+        title: "completed"
     message:
+      please: "please sign in"
       remember: "remember login info."
       forget:
-        password: "forget password ?"
+        password: "forget your password ?"
+      sign_on:
+        guidance: |
+          please input your name and mail address for member registration.
+        complete: |
+          temp_member registration completed.
+          please check mail sent.

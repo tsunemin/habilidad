@@ -1,0 +1,13 @@
+div.alert.alert-warning {
+    padding: initial;
+}
+
+div.alert.alert-warning>ul {
+    margin-bottom: initial;
+    padding-inline-start: 30px;
+}
+
+div.alert.alert-warning>ul>li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

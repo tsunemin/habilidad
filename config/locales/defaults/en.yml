@@ -32,7 +32,8 @@
 en:
   application:
     name: "habilidad"
-    header: "habilidad -skill sheet management system-"
+    system_name: "skillsheet management system"
+    header: "habilidad -skillsheet management system-"
   dictionary:
     menu:
       title:
@@ -57,6 +58,8 @@ en:
       update: "update"
       destroy: "destory"
       cancel: "cancel"
+      close: "close"
+      sign_on: "sign on"
   time:
     formats:
       default: ! "%Y-%m-%d %H:%M:%S"

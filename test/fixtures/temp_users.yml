@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mail_address: MyString
+  last_name: MyString
+  first_name: MyString
+  token: MyString
+  expired_on: 2019-04-30 12:43:38
+
+two:
+  mail_address: MyString
+  last_name: MyString
+  first_name: MyString
+  token: MyString
+  expired_on: 2019-04-30 12:43:38

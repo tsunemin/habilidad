@@ -1,0 +1,9 @@
+<% if @status == 'success' %>
+    $('#top_modal').modal('hide');
+    setTimeout(function(){
+        $('#top_modal').html('<%= j(render 'completed_sign_on') %>');
+        $('#top_modal').modal('show');
+    }, 500);
+<% elsif @status == 'fail' %>
+    $('#sign_on_errors').html('<%= j(render 'layouts/error_messages', model: @temp_user) %>');
+<% end %>

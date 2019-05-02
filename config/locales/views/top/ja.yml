@@ -2,7 +2,29 @@ ja:
   top:
     index:
       title: "TOP"
+    sign_on:
+      title: "ユーザ仮登録"
+      form:
+        last_name:
+          label: "姓"
+          placeholder: "山田"
+        first_name:
+          label: "名"
+          placeholder: "太郎"
+        mail_address:
+          label: "メールアドレス"
+          placeholder: "your.mail@example.com"
+        submit: "登録"
+      complete:
+        title: "ユーザ仮登録完了"
     message:
+      please: "please sign in"
       remember: "ログイン情報を記憶する"
       forget:
         password: "パスワードをお忘れの方はこちら..."
+      sign_on: 
+        guidance: |
+          ユーザ仮登録のため、氏名・メールアドレスを入力してください
+        complete: |
+          ユーザ仮登録完了メールをしました
+          送信されたメールを確認してください

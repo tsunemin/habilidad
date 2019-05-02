@@ -1,7 +1,8 @@
 ja:
   application:
     name: "habilidad"
-    header: "habilidad -skill sheet management system-"
+    system_name: "skillsheet management system"
+    header: "habilidad -skillsheet management system-"
   dictionary:
     menu:
       title:
@@ -26,6 +27,8 @@ ja:
       update: "更新"
       destroy: "削除"
       cancel: "キャンセル"
+      close: "閉じる"
+      sign_on: "sign on"
   time:
     formats:
       default: ! "%Y-%m-%d %H:%M:%S"

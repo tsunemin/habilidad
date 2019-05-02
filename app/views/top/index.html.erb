@@ -5,13 +5,14 @@
 <div class="relative-next">
     <div class="card">
         <form>
-            <p class="use-fontawesome small text-center">skillsheet management system</p>
+            <p class="use-fontawesome small text-center"><%= t('application.system_name') %></p>
             <%= image_tag "habilidad-logo.png", class: "img-habilidad", size: "200x145", alt: "" %>
             <h4 id="label_sign_in" class="use-fontawesome font-weight-normal text-center">please sign in</h4>
             <input class="use-fontawesome form-control mb-2" placeholder="&#xf0e0; mail address">
             <input type="password" class="use-fontawesome form-control" placeholder="&#xf13e;  password">
             <div class="use-fontawesome checkbox mt-2 mb-1 small text-center">
-                <input id="remember_me" type="checkbox"> <label for="remember_me"><%= t('top.message.remember') %></label>
+                <input id="remember_me" type="checkbox"> <label
+                    for="remember_me"><%= t('top.message.remember') %></label>
             </div>
             <button type="submit" class="use-fontawesome btn btn-dark"><i class="fa fa-sign-in"></i> sign in</button>
         </form>
@@ -20,3 +21,4 @@
         </div>
     </div>
 </div>
+<div id="top_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
