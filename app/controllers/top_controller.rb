@@ -15,8 +15,8 @@ class TopController < ApplicationController
         @temp_user.last_name = temp_users_params[:last_name]
         @temp_user.first_name = temp_users_params[:first_name]
         # トークンを生成
-        @temp_user.token = create_token
-        # 有効期限に現在日時をセットする
+        @temp_user.token = TempUser.create_token
+        # 有効期限に現在日時をセット
         @temp_user.expired_at = DateTime.now
 
         respond_to do |format|
@@ -32,16 +32,5 @@ class TopController < ApplicationController
     private
         def temp_users_params
             params.require(:temp_user).permit(:mail_address, :last_name, :first_name);
-        end
-
-        # トークン生成
-        # 生成したトークンが使用されていた場合 再作成する
-        def create_token
-            token = nil
-            loop do
-                token = SecureRandom.urlsafe_base64
-                    break if TempUser.find_by(token: token).nil?
-            end
-            return token
         end
 end

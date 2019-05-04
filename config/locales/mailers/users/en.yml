@@ -1,0 +1,15 @@
+en:
+  mailers:
+    users:
+      new:
+        subject: |
+          [habilidad] User Registration Request
+        body: |
+          Dear %{first_name} %{last_name}
+
+          Thank you for user registering.
+          Please access the following URL to confirm your mail address.
+
+          %{url}
+
+          Regards.

@@ -32,3 +32,13 @@ ja:
   time:
     formats:
       default: ! "%Y-%m-%d %H:%M:%S"
+  mailers:
+    signature: |
+      ----------
+      [habilidad] - skillsheet management system -
+      mail address: xxx@yyyy.com
+      tel: 00-xxxx-xxxx
+      ----------
+  validate:
+    format: "はフォーマットが正しくありません"
+    already_use: "はすでに使用されています"

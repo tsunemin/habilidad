@@ -63,3 +63,13 @@ en:
   time:
     formats:
       default: ! "%Y-%m-%d %H:%M:%S"
+  mailers:
+    signature: |
+      ----------
+      [habilidad] - skillsheet management system -
+      mail address: xxx@yyyy.com
+      tel: 00-XXXX-XXXX
+      ----------
+  validate:
+    format: "is not formatted correctly."
+    already_use: "is already used."
