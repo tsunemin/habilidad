@@ -7,7 +7,7 @@ en:
         id: "id"
         mail_address: "mail address"
         last_name: "last name"
-        first_name: "first_name"
+        first_name: "first name"
         token: "token"
         expired_at: "expired_at"
         created_at: "created_at"
