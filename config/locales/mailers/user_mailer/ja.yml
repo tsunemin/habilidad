@@ -1,0 +1,6 @@
+ja:
+  mailers:
+    user_mailer:
+      request_registration:
+        subject: |
+          [habilidad] ユーザ登録ありがとうございます

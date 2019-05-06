@@ -22,6 +22,7 @@ class TopController < ApplicationController
         respond_to do |format|
             # UPSERT実行
             if @temp_user.save
+                UserMailer.with(temp_user: @temp_user).request_registration.deliver_later
                 format.js { @status = "success" }
             else
                 format.js { @status = "fail" }

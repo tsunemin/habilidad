@@ -1,0 +1,16 @@
+<%= @temp_user.last_name %> <%= @temp_user.first_name %> 様<br>
+<br>
+habilidadです.<br>
+ユーザ登録ありがとうございます.<br>
+メールアドレス確認のために 下記のURLにアクセスをお願いします.<br>
+<br>
+<%= url_for(controller: 'top', action: 'index', anchor: @temp_user.token) %><br>
+<br>
+Dear <%= @temp_user.first_name %> <%= @temp_user.last_name %><br>
+<br>
+Thank you for user registering.<br>
+Please access the following URL to confirm your mail address.<br>
+<br>
+<%= url_for(controller: 'top', action: 'index', anchor: @temp_user.token) %><br>
+<br>
+Regards.

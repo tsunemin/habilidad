@@ -1,0 +1,6 @@
+en:
+  mailers:
+    user_mailer:
+      request_registration:
+        subject: |
+          [habilidad] User Registration Request
