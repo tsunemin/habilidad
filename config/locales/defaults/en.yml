@@ -43,6 +43,9 @@ en:
       update: "update"
       destroy:
         confirm: "Are you sure?"
+    sex:
+      male: "male"
+      female: "female"
     message:
       create:
         complete: "Registration of ID:%{id} was completed."

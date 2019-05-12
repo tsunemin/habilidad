@@ -1,0 +1,25 @@
+en:
+  account:
+    regist:
+      title: "regist"
+      form:
+        regist:
+          placeholder: "Doe"
+        first_name:
+          placeholder: "John"
+        last_name_roman:
+          help_block: "* upper case."
+          placeholder: "DOE"
+        first_name_roman:
+          help_block: "* upper case."
+          placeholder: "JOHN"
+        birthed_on:
+          placeholder: "1990-01-01"
+        mail_address:
+          placeholder: "your.mail@example.com"
+        password:
+          help_block: "* must 8 characters or more. use 3 to 4 types(lower case/upper case/number/symbol[@#$%]) of characters."
+          placeholder: "password"
+        password_confirmation:
+          placeholder: "password(confirm)"
+        submit: "registration"

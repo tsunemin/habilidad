@@ -13,3 +13,9 @@ html::-webkit-scrollbar {
     color: #ff0018 !important;
     font-weight: bold;
 }
+
+.help-block {
+    font-size: xx-small;
+    margin: initial;
+    color: #007bff;
+}

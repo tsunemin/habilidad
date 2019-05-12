@@ -6,7 +6,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <%= form_with model: @temp_user, url: create_temp_user_path, remote: true do |form| %>
+        <%= form_with model: @temp_user, url: top_create_path, remote: true do |form| %>
         <div class="modal-body">
             <div id="sign_on_errors"></div>
             <%= simple_format t('top.message.sign_on.guidance'), class: "small" %>

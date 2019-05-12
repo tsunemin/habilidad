@@ -12,6 +12,9 @@ ja:
       update: "更新"
       destroy:
         confirm: "削除確認"
+    sex:
+      male: "男性"
+      female: "女性"
     message:
       create:
         complete: "登録しました(ID:%{id})"

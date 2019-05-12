@@ -4,13 +4,13 @@ habilidadです.
 ユーザ登録ありがとうございます.
 メールアドレス確認のために 下記のURLにアクセスをお願いします.
 
-<%= url_for(controller: 'top', action: 'index', anchor: @temp_user.token) %>
+<%= url_for(controller: 'account', action: 'regist', token: @temp_user.token ) %>
 
 Dear <%= @temp_user.first_name %> <%= @temp_user.last_name %>
 
 Thank you for user registering.
 Please access the following URL to confirm your mail address.
 
-<%= url_for(controller: 'top', action: 'index', anchor: @temp_user.token) %>
+<%= url_for(controller: 'account', action: 'regist', token: @temp_user.token ) %>
 
 Regards.

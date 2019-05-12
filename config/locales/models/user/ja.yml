@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      user: "ユーザ"
+    attributes:
+      user:
+        id: "ID"
+        last_name: "姓"
+        first_name: "名"
+        last_name_roman: "姓(roman)"
+        first_name_roman: "名(roman)"
+        sex: "性別"
+        birthed_on: "生年月日"
+        mail_address: "メールアドレス"
+        password_digest: "パスワード(digest)"
+        password: "パスワード"
+        password_confirmation: "パスワード(確認)"
+        created_at: "登録日時"
+        updated_at: "更新日時"

@@ -1,0 +1,25 @@
+ja:
+  account:
+    regist:
+      title: "ユーザ登録"
+      form:
+        last_name:
+          placeholder: "山田"
+        first_name:
+          placeholder: "太郎"
+        last_name_roman:
+          help_block: "※英大文字"
+          placeholder: "YAMADA"
+        first_name_roman:
+          help_block: "※英大文字"
+          placeholder: "TARO"
+        birthed_on:
+          placeholder: "1990-01-01"
+        mail_address:
+          placeholder: "your.mail@example.com"
+        password:
+          help_block: "※8文字以上入力してください. 4種類(英小文字/英大文字/数字/記号[@#$%])から３種類使用してください."
+          placeholder: "password"
+        password_confirmation:
+          placeholder: "password(confirm)"
+        submit: "登録"

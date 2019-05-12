@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      user: "user"
+    attributes:
+      user:
+        id: "id"
+        last_name: "last name"
+        first_name: "first name"
+        last_name_roman: "last name(roman)"
+        first_name_roman: "first name(roman)"
+        sex: "sex"
+        birthed_on: "birthday"
+        mail_address: "mail address"
+        password_digest: "password(digest)"
+        password: "password"
+        password_confirmation: "password(confirmation)"
+        created_at: "created_at"
+        updated_at: "updated_at"
