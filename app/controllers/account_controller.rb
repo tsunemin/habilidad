@@ -11,13 +11,11 @@ class AccountController < ApplicationController
 
     def create
         @user = User.new(users_params)
-        p @user
         respond_to do |format|
             if @user.save
               redirect_to root_path
             else
               format.html { render :regist }
-              format.json { render json: @user.errors, status: :unprocessable_entity }
             end
         end
     end
