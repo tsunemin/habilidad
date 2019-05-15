@@ -2,6 +2,12 @@ ja:
   top:
     index:
       title: "TOP"
+      form:
+        mail_address:
+          placeholder: "mail address"
+        password:
+          placeholder: "password"
+        submit: "sign in"
     sign_on:
       title: "ユーザ仮登録"
       form:

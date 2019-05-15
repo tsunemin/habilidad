@@ -38,16 +38,18 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {host: "localhost", port: 3000}
   
   # action_mailer send using GMail setting.
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    enable_starttls_auto: true,
-    address: 'smtp.gmail.com',
-    port: '587',
-    domain: 'smtp.gmail.com',
-    authentication: 'plain',
-    user_name: '[GMail Accout]',
-    password: '[Password]'
-  }
+  # letter_opener_web config.
+  config.action_mailer.delivery_method = :letter_opener_web
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   enable_starttls_auto: true,
+  #   address: 'smtp.gmail.com',
+  #   port: '587',
+  #   domain: 'smtp.gmail.com',
+  #   authentication: 'plain',
+  #   user_name: '[GMail Accout]',
+  #   password: '[Password]'
+  # }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

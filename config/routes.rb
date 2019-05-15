@@ -12,6 +12,11 @@ Rails.application.routes.draw do
     get 'account/regist', to: 'account#regist'
     post 'account/create', to: 'account#create'
   
+    # sessions_controller
+    get 'login', to: 'sessions#new'
+    post 'login', to: 'sessions#create'
+    delete 'logout', to: 'sessions#destroy'
+
     # businesses_controller
     resources :businesses
 
@@ -20,5 +25,8 @@ Rails.application.routes.draw do
 
     # certifications_controller
     resources :certifications
+
+    # letter_opener_web
+    mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   end
 end

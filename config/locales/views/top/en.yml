@@ -7,6 +7,7 @@ en:
           placeholder: "mail address"
         password:
           placeholder: "password"
+        submit: "sign in"
     sign_on:
       title: "sign on"
       form:
