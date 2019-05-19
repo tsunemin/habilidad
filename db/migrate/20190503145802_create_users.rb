@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.date :birthed_on,         null: false
       t.string :mail_address,     null: false
       t.string :password_digest,  null: false
+      t.string :remember_token
 
       t.timestamps
     end

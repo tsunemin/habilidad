@@ -4,3 +4,9 @@ ja:
       request_registration:
         subject: |
           [habilidad] ユーザ登録ありがとうございます
+        dear: "%{last_name} %{first_name} 様"
+        message: |
+          habilidadです.
+          ユーザ仮登録 ありがとうございます.
+          下記ボタンより 登録をお願いします.
+        button: "ユーザ登録"

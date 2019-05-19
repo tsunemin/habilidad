@@ -1,16 +1,6 @@
-<%= @temp_user.last_name %> <%= @temp_user.first_name %> 様<br>
-<br>
-habilidadです.<br>
-ユーザ登録ありがとうございます.<br>
-メールアドレス確認のために 下記のURLにアクセスをお願いします.<br>
-<br>
-<%= url_for(controller: 'account', action: 'regist', token: @temp_user.token ) %><br>
-<br>
-Dear <%= @temp_user.first_name %> <%= @temp_user.last_name %><br>
-<br>
-Thank you for user registering.<br>
-Please access the following URL to confirm your mail address.<br>
-<br>
-<%= url_for(controller: 'account', action: 'regist', token: @temp_user.token ) %><br>
-<br>
-Regards.
+<%= stylesheet_link_tag "mailers/request_registration.css", media: "all" %>
+<p class="message"><%= t('mailers.user_mailer.request_registration.dear', last_name: @temp_user.last_name, first_name: @temp_user.first_name) %></p>
+<pre class="message"><%= t('mailers.user_mailer.request_registration.message') %></pre>
+<div class="btn">
+    <%= link_to t('mailers.user_mailer.request_registration.button'), {controller: 'account', action: 'regist', token: @temp_user.token } %>
+</div>

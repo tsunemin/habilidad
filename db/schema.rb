@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2019_05_03_145802) do
     t.date "birthed_on", null: false
     t.string "mail_address", null: false
     t.string "password_digest", null: false
+    t.string "remember_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

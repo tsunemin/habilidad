@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
         <%= form.label :sex, class: "form-control-label text-primary" %>
-        <%= form.select :sex, [[I18n.t('dictionary.sex.male'), 0], [I18n.t('dictionary.sex.female'), 1]], {}, class: "custom-select" %>
+        <%= form.select :sex, select_sex, {}, class: "custom-select" %>
     </div>
     <div class="form-group">
         <%= form.label :birthed_on, class: "form-control-label text-primary" %>

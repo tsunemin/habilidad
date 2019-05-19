@@ -5,9 +5,20 @@
     <style>
       /* Email styles need to be inline */
     </style>
+    <%= stylesheet_link_tag "mailers/mailer.css", media: "all" %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header">
+      <h1><%= t('application.name') %></h1>
+    </div>
+    <hr>
+    <div class="yield">
+      <%= yield %>
+    </div>
+    <hr>
+    <div class="footer">
+      <pre><%= t('mailers.mailer.footer') %></pre>
+    </div>
   </body>
 </html>

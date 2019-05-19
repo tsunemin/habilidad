@@ -19,4 +19,16 @@ class User < ApplicationRecord
         end
     end
 
+    # create remember token
+    def self.create_remember_token
+        SecureRandom.urlsafe_base64
+    end
+
+    # encrypt
+    def self.encrypt(token)
+        Digest::SHA256.hexdigest(token.to_s)
+    end
+
 end
+
+

@@ -4,3 +4,9 @@ en:
       request_registration:
         subject: |
           [habilidad] User Registration Request
+        dear: "Dear %{first_name} %{last_name}"
+        message: |
+          this is habilidad.
+          thank you for user temporary registration.
+          please register from the button below.
+        button: "user registration"

@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+    # filter
+    # actionの直前に実行されるfilterをskipする
+    skip_before_action :require_sign_in!, only: [:new, :create]
+    # actionの直前に実行されるfilter
     before_action :set_user, only: [:create]
 
     def new
@@ -21,7 +25,6 @@ class SessionsController < ApplicationController
 
     private
         def set_user
-            # find_by! : if record is not found, throw exception.
             @user = User.find_by!(mail_address: session_params[:mail_address])
         rescue
             render :new

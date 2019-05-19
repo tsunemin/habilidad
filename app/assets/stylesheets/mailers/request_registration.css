@@ -1,0 +1,26 @@
+div.btn > a {
+    display: block;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding: 0.3em;
+    margin: 0.5em 0 0.5em 0;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0.65em;
+    text-decoration: none;
+    text-align: center;
+    background-color: #777777;
+}
+
+div.btn > a:hover {
+    background-color: #999999;
+}
+
+p.message {
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+pre.message {
+    margin: initial;
+    text-align: center;
+}

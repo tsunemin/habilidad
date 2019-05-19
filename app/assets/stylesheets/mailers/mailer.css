@@ -1,0 +1,23 @@
+/** Google Font **/
+@import url('https://fonts.googleapis.com/css?family=Kodchasan|M+PLUS+Rounded+1c&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.yield {
+    margin: 0 0.7em 0 0.7em;
+}
+
+div.header > h1 {
+    text-align: center;
+    margin: 0.5em 0 0.5em 0;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+div.footer > pre {
+    text-align: center;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: small;
+}

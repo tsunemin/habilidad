@@ -1,4 +1,6 @@
 class CertificationsController < ApplicationController
+  # filter
+  # actionの直前に実行されるfilter
   before_action :set_certification, only: [:show, :edit, :update, :destroy]
 
   # GET /certifications

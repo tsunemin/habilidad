@@ -1,4 +1,6 @@
 class BusinessesController < ApplicationController
+  # filter
+  # actionの直前に実行されるfilter
   before_action :set_business, only: [:show, :edit, :update, :destroy]
 
   # GET /businesses

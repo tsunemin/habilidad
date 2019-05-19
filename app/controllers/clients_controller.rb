@@ -1,4 +1,6 @@
 class ClientsController < ApplicationController
+  # filter
+  # actionの直前に実行されるfilter
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   # GET /clients
