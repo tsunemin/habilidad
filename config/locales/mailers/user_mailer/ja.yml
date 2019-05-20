@@ -3,10 +3,16 @@ ja:
     user_mailer:
       request_registration:
         subject: |
-          [habilidad] ユーザ登録ありがとうございます
+          [habilidad] ユーザ仮登録ありがとうございます
         dear: "%{last_name} %{first_name} 様"
-        message: |
+        message_html: |
           habilidadです.
           ユーザ仮登録 ありがとうございます.
           下記ボタンより 登録をお願いします.
+          (有効期限は%{expired_at}となっています.)
         button: "ユーザ登録"
+        message_text: |
+          habilidadです.
+          ユーザ仮登録 ありがとうございます.
+          下記リンクより 登録をお願いします.
+          (有効期限は%{expired_at}となっています.)        

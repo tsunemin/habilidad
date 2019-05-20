@@ -5,8 +5,14 @@ en:
         subject: |
           [habilidad] User Registration Request
         dear: "Dear %{first_name} %{last_name}"
-        message: |
+        message_html: |
           this is habilidad.
           thank you for user temporary registration.
           please register from the button below.
+          (the expiration date is %{expired_at}.)
         button: "user registration"
+        message_text: |
+          this is habilidad.
+          thank you for user temporary registration.
+          please register from the link below.
+          (the expiration date is %{expired_at}.)
