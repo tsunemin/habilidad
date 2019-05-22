@@ -1,7 +1,7 @@
 <% if @status == 'success' %>
     $('#alert_messages').html('<%= j(render 'layouts/alert_messages', model: @business) %>');
     $('#businesses_table').html('<%= j(render 'table') %>');
-    $('#businesses_modal').modal('hide');
+    $('#application_modal').modal('hide');
 <% elsif @status == 'fail' %>
     $('#businesses_errors').html('<%= j(render 'layouts/error_messages', model: @business) %>');
 <% end %>

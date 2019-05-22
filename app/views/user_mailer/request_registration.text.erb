@@ -5,7 +5,7 @@
 
 <%= t('mailers.user_mailer.request_registration.message_text', expired_at: l(@temp_user.expired_at, format: :default)) %>
 
-<%= url_for(controller: 'account', action: 'regist', token: @temp_user.token ) %>
+<%= url_for(controller: 'account', action: 'regist', locale: @locale, token: @temp_user.token ) %>
 
 ----------
 <%= t('mailers.mailer.footer') %>
