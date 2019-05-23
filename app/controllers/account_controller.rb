@@ -15,12 +15,10 @@ class AccountController < ApplicationController
 
     def create
         @user = User.new(users_params)
-        respond_to do |format|
-            if @user.save
-              format.html { render :complete }
-            else
-              format.html { render :regist }
-            end
+        if @user.save
+            render action: :complete
+        else
+            render action: :regist
         end
     end
 

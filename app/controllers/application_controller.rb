@@ -39,6 +39,7 @@ class ApplicationController < ActionController::Base
         @current_user = nil
         # cookieのremember_tokenを削除する
         cookies.delete(:remember_token)
+        redirect_to login_path
     end
 
     def signed_in?

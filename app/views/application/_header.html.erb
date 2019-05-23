@@ -9,18 +9,24 @@
         <ul class="navbar-nav mr-auto">
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a id="dropdown_nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-users"></i> <%= t('dictionary.menu.title.admin') %>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                    <%= link_to t('businesses.index.title'), businesses_path, id: "businesses_nav", class: "dropdown-item-text" %>
-                    <%= link_to t('clients.index.title'), clients_path, id: "clients_nav", class: "dropdown-item-text" %>
-                    <%= link_to t('certifications.index.title'), certifications_path, id: "certifications_nav", class: "dropdown-item-text" %>
-                </div>
-            </li>
+            <% if signed_in? %>
+                <li class="nav-item dropdown">
+                    <a id="dropdown_nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-users"></i> <%= t('dictionary.menu.title.admin') %>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
+                        <%= link_to t('businesses.index.title'), businesses_path, id: "businesses_nav", class: "dropdown-item-text" %>
+                        <%= link_to t('clients.index.title'), clients_path, id: "clients_nav", class: "dropdown-item-text" %>
+                        <%= link_to t('certifications.index.title'), certifications_path, id: "certifications_nav", class: "dropdown-item-text" %>
+                    </div>
+                </li>
+            <% end %>
         </ul>
-        <%= link_to t('dictionary.button.sign_on'), { controller: "top", action: "sign_on" } ,remote: true, class: "btn btn-dark btn-outline-light" %>
+        <% if signed_in? %>
+            <%= link_to 'sign out', { controller: "application", action: "sign_out" }, local: true, class: "btn btn-dark btn-outline-light" %>
+        <% else %>
+            <%= link_to t('dictionary.button.sign_on'), { controller: "top", action: "sign_on" } ,remote: true, class: "btn btn-dark btn-outline-light" %>
+        <% end %>
     </div>
 </nav>

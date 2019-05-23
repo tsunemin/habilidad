@@ -4,10 +4,11 @@
 </div>
 <div class="relative-next">
     <div class="card">
-        <%= form_for :session, url: login_path, local: true do |form| %>
+        <%= form_with model: @session, url: login_path, local: true do |form| %>
             <p class="use-fontawesome small text-center"><%= t('application.system_name') %></p>
             <%= image_tag "habilidad-logo.png", class: "img-habilidad", size: "200x145", alt: "" %>
             <h4 id="label_sign_in" class="use-fontawesome font-weight-normal text-center"><%= t('top.message.please') %></h4>
+            <%= render 'layouts/error_messages', model: @session %>
             <%= form.text_field :mail_address, class: "form-control mb-2 use-fontawesome", placeholder: sanitize('&#xf0e0; ') + t('top.index.form.mail_address.placeholder') %>
             <%= form.password_field :password, class: "form-control use-fontawesome", placeholder: sanitize('&#xf13e;  ') + t('top.index.form.password.placeholder') %>
             <div class="use-fontawesome checkbox mt-2 mb-1 small text-center">

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     root 'top#index'
 
+    # application_controller
+    get 'sign_out', to: 'application#sign_out'
+
     # top_controller
     get 'top', to: 'top#index'
     get 'top/sign_on', to: 'top#sign_on'

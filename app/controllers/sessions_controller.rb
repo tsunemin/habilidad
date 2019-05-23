@@ -6,16 +6,15 @@ class SessionsController < ApplicationController
     before_action :set_user, only: [:create]
 
     def new
-        render 'top/index'
+        redirect_to root_path
     end
 
     def create
-        if @user.authenticate(session_params[:password])
+        if @user.authenticate(@session.password)
             sign_in(@user)
-            redirect_to root_path
-        else
-            render :new
+            redirect_to root_path and return
         end
+        render "top/index"
     end
 
     def destroy
@@ -25,9 +24,13 @@ class SessionsController < ApplicationController
 
     private
         def set_user
-            @user = User.find_by!(mail_address: session_params[:mail_address])
+            @session = Session.new(session_params)
+            if !@session.valid?
+                render "top/index" and return
+            end
+            @user = User.find_by!(mail_address: @session.mail_address)
         rescue
-            render :new
+            render "top/index"
         end
     
         def session_params
