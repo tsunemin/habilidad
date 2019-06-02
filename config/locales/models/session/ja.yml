@@ -1,0 +1,11 @@
+ja:
+  activemodel:
+    models:
+      session: "セッション"
+    attributes:
+      session:
+        mail_address: "メールアドレス"
+        password: "パスワード"
+    errors:
+      session:
+        sign_in_failure: "メールアドレス・パスワードが不正です."

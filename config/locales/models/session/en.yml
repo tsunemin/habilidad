@@ -1,0 +1,11 @@
+en:
+  activemodel:
+    models:
+      session: "session"
+    attributes:
+      session:
+        mail_address: "mail address"
+        password: "password"
+    errors:
+      session:
+        sign_in_failure: "mail address / password is invalid."

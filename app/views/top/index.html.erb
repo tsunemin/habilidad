@@ -1,24 +1,5 @@
-<%= stylesheet_link_tag "views/top.css", media: "all" %>
-<div class="relative">
-    <%= video_tag "top.mp4", poster: "top.png", autoplay: "true", loop: "true", muted: "true", type: "video/quicktime" %>
-</div>
-<div class="relative-next">
-    <div class="card">
-        <%= form_with model: @session, url: login_path, local: true do |form| %>
-            <p class="use-fontawesome small text-center"><%= t('application.system_name') %></p>
-            <%= image_tag "habilidad-logo.png", class: "img-habilidad", size: "200x145", alt: "" %>
-            <h4 id="label_sign_in" class="use-fontawesome font-weight-normal text-center"><%= t('top.message.please') %></h4>
-            <%= render 'layouts/error_messages', model: @session %>
-            <%= form.text_field :mail_address, class: "form-control mb-2 use-fontawesome", placeholder: sanitize('&#xf0e0; ') + t('top.index.form.mail_address.placeholder') %>
-            <%= form.password_field :password, class: "form-control use-fontawesome", placeholder: sanitize('&#xf13e;  ') + t('top.index.form.password.placeholder') %>
-            <div class="use-fontawesome checkbox mt-2 mb-1 small text-center">
-                <input id="remember_me" type="checkbox"> <label
-                    for="remember_me"><%= t('top.message.remember') %></label>
-            </div>
-            <%= button_tag sanitize('<i class="fa fa-sign-in"></i> ') + t('top.index.form.submit'), type: "submit", class: "btn btn-dark use-fontawesome" %>
-        <% end %>
-        <div class="forget-password">
-            <%= link_to t('top.message.forget.password'), top_path, class: "use-fontawesome small" %>
-        </div>
-    </div>
-</div>
+<% if signed_in? %>
+    <%= @current_user.last_name %>
+<% else %>
+    <%= render 'top/top' %>
+<% end %>
