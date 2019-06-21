@@ -2,48 +2,48 @@
 <%= stylesheet_link_tag "views/account.css", media: "all" %>
 <h3><%= t('account.regist.title') %></h3>
 <%= form_with model: @user, url: account_create_path, local: true do |form| %>
-<%= render 'layouts/error_messages', model: @user %>
-<div class="card">
+  <%= render 'layouts/error_messages', model: @user %>
+  <div class="card">
     <div class="form-group">
-        <%= form.label :last_name, class: "form-control-label text-primary" %>
-        <%= form.text_field :last_name, placeholder: t('account.regist.form.last_name.placeholder'), class: "form-control", readonly: true %>
+      <%= form.label :last_name, class: "form-control-label text-primary" %>
+      <%= form.text_field :last_name, placeholder: t('account.regist.form.last_name.placeholder'), class: "form-control", readonly: true %>
     </div>
     <div class="form-group">
-        <%= form.label :first_name, class: "form-control-label text-primary" %>
-        <%= form.text_field :first_name, placeholder: t('account.regist.form.first_name.placeholder'), class: "form-control", readonly: true %>
+      <%= form.label :first_name, class: "form-control-label text-primary" %>
+      <%= form.text_field :first_name, placeholder: t('account.regist.form.first_name.placeholder'), class: "form-control", readonly: true %>
     </div>
     <div class="form-group">
-        <%= form.label :last_name_roman, class: "form-control-label" %>
-        <p class="help-block"><%= t('account.regist.form.last_name_roman.help_block') %></p>
-        <%= form.text_field :last_name_roman, id: "last_name_roman", placeholder: t('account.regist.form.last_name_roman.placeholder'), class: "form-control text-roman" %>
+      <%= form.label :last_name_roman, class: "form-control-label" %>
+      <p class="help-block"><%= t('account.regist.form.last_name_roman.help_block') %></p>
+      <%= form.text_field :last_name_roman, id: "last_name_roman", placeholder: t('account.regist.form.last_name_roman.placeholder'), class: "form-control text-roman" %>
     </div>
     <div class="form-group">
-        <%= form.label :first_name_roman, class: "form-control-label" %>
-        <p class="help-block"><%= t('account.regist.form.first_name_roman.help_block') %></p>
-        <%= form.text_field :first_name_roman, id: "first_name_roman",  placeholder: t('account.regist.form.first_name_roman.placeholder'), class: "form-control text-roman" %>
+      <%= form.label :first_name_roman, class: "form-control-label" %>
+      <p class="help-block"><%= t('account.regist.form.first_name_roman.help_block') %></p>
+      <%= form.text_field :first_name_roman, id: "first_name_roman",  placeholder: t('account.regist.form.first_name_roman.placeholder'), class: "form-control text-roman" %>
     </div>
     <div class="form-group">
-        <%= form.label :sex, class: "form-control-label text-primary" %>
-        <%= form.select :sex, select_sex, {}, class: "custom-select" %>
+      <%= form.label :sex, class: "form-control-label text-primary" %>
+      <%= form.select :sex, select_sex, {}, class: "custom-select" %>
     </div>
     <div class="form-group">
-        <%= form.label :birthed_on, class: "form-control-label text-primary" %>
-        <%= form.text_field :birthed_on, id: "birthed_on", placeholder: t('account.regist.form.birthed_on.placeholder'), class: "form-control datetimepicker-input", data: { target: '#birthed_on', toggle: 'datetimepicker' } %>
+      <%= form.label :birthed_on, class: "form-control-label text-primary" %>
+      <%= form.text_field :birthed_on, id: "birthed_on", placeholder: t('account.regist.form.birthed_on.placeholder'), class: "form-control datetimepicker-input", data: { target: '#birthed_on', toggle: 'datetimepicker' } %>
     </div>
     <div class="form-group">
-        <%= form.label :mail_address, class: "form-control-label text-primary" %>
-        <%= form.text_field :mail_address, placeholder: t('account.regist.form.mail_address.placeholder'), class: "form-control", readonly: true %>
+      <%= form.label :mail_address, class: "form-control-label text-primary" %>
+      <%= form.text_field :mail_address, placeholder: t('account.regist.form.mail_address.placeholder'), class: "form-control", readonly: true %>
     </div>
     <div class="form-group">
-        <%= form.label :password, class: "form-control-label text-primary" %>
-        <p class="help-block"><%= t('account.regist.form.password.help_block') %></p>
-        <%= form.password_field :password, placeholder: t('account.regist.form.password.placeholder'), class: "form-control" %>
+      <%= form.label :password, class: "form-control-label text-primary" %>
+      <p class="help-block"><%= t('account.regist.form.password.help_block') %></p>
+      <%= form.password_field :password, placeholder: t('account.regist.form.password.placeholder'), class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= form.password_field :password_confirmation, placeholder: t('account.regist.form.password_confirmation.placeholder'), class: "form-control" %>
+      <%= form.password_field :password_confirmation, placeholder: t('account.regist.form.password_confirmation.placeholder'), class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= form.submit t('account.regist.form.submit'), id: "account_regist_submit", class: "btn btn-primary" %>
+      <%= form.submit t('account.regist.form.submit'), id: "account_regist_submit", class: "btn btn-primary" %>
     </div>
-</div>
+  </div>
 <% end %>

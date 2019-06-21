@@ -12,3 +12,8 @@ dateFormat = {
         return this._priority.reduce((res, fmt) => res.replace(fmt, this._fmt[fmt](date)), format)
     }
 };
+
+$(function () {
+    $('a').removeClass('dropdown-active');
+    $('.nav-link').removeClass('active');
+});

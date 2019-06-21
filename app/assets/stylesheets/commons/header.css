@@ -1,28 +1,24 @@
-/** not display under line navbar-brand-link */
-span.navbar-brand.mb-0.h1 > a {
+.navbar-brand.mb-0.h1 a {
     text-decoration: none;
 }
 
-/** navbar header dropdown menu */
-div.dropdown-menu.dropdown-menu-right {
-    margin-top: 8px;
+.dropdown-menu.dropdown-menu-right {
+    border-color: rgba(255, 255, 255, 0.5);
     border-radius: initial;
     border-style: dashed;
-    border-color: rgba(255, 255, 255, 0.5);
+    padding: initial;
+    margin: 8px 0 8px 0;
 }
 
-/** dropdown item text normal */
-a.dropdown-item-text {
-    text-decoration: none;
+.dropdown-item-text {
     color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
 }
 
-/** dropdown item text hover */
-a.dropdown-item-text:hover {
+.dropdown-item-text:hover {
     color: rgba(255, 255, 255, 0.75);
 }
 
-/** dropdown item text selected(active) */
-a.dropdown-item-text.dropdown-active {
+.dropdown-item-text.dropdown-active {
     color: rgba(255, 255, 255, 1.0) !important;
 }

@@ -1,22 +1,22 @@
 <table id="businesses_table" class="table table-hover">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th><%= Business.human_attribute_name(:name) %></th>
-            <th><%= Business.human_attribute_name(:created_at) %></th>
-            <th><%= Business.human_attribute_name(:updated_at) %></th>
-        </tr>
-    </thead>
-    <% if !@businesses.blank? %>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><%= Business.human_attribute_name(:name) %></th>
+      <th><%= Business.human_attribute_name(:created_at) %></th>
+      <th><%= Business.human_attribute_name(:updated_at) %></th>
+    </tr>
+  </thead>
+  <% if !@businesses.blank? %>
     <tbody>
-        <% @businesses.each do |business| %>
+      <% @businesses.each do |business| %>
         <tr>
-            <td><%= link_to business.id, edit_business_path(business), remote: true %></td>
-            <td><%= link_to business.name, edit_business_path(business), remote: true %></td>
-            <td><%= link_to l(business.created_at, format: :default), edit_business_path(business), remote: true %></td>
-            <td><%= link_to l(business.updated_at, format: :default), edit_business_path(business), remote: true %></td>
+          <td><%= link_to business.id, edit_business_path(business), remote: true %></td>
+          <td><%= link_to business.name, edit_business_path(business), remote: true %></td>
+          <td><%= link_to l(business.created_at, format: :default), edit_business_path(business), remote: true %></td>
+          <td><%= link_to l(business.updated_at, format: :default), edit_business_path(business), remote: true %></td>
         </tr>
-        <% end %>
+      <% end %>
     </tbody>
-    <% end %>
+  <% end %>
 </table>

@@ -2,5 +2,5 @@
 <p class="message"><%= t('mailers.user_mailer.request_registration.dear', last_name: @temp_user.last_name, first_name: @temp_user.first_name) %></p>
 <pre class="message"><%= t('mailers.user_mailer.request_registration.message_text', expired_at: l(@temp_user.expired_at, format: :default)) %></pre>
 <div class="btn">
-    <%= link_to t('mailers.user_mailer.request_registration.button'), {controller: 'account', action: 'regist', locale: @locale, token: @temp_user.token } %>
+  <%= link_to t('mailers.user_mailer.request_registration.button'), {controller: 'account', action: 'regist', locale: @locale, token: @temp_user.token } %>
 </div>

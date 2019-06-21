@@ -1,24 +1,24 @@
 <table id="certifications_table" class="table table-hover">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th><%= Certification.human_attribute_name(:name) %></th>
-            <th><%= Certification.human_attribute_name(:created_at) %></th>
-            <th><%= Certification.human_attribute_name(:updated_at) %></th>
-        </tr>
-    </thead>
-    <% if !@certifications.blank? %>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><%= Certification.human_attribute_name(:name) %></th>
+      <th><%= Certification.human_attribute_name(:created_at) %></th>
+      <th><%= Certification.human_attribute_name(:updated_at) %></th>
+    </tr>
+  </thead>
+  <% if !@certifications.blank? %>
     <tbody>
-        <% @certifications.each do |certification| %>
+      <% @certifications.each do |certification| %>
         <tr>
-            <td><%= link_to certification.id, edit_certification_path(certification), remote: true %></td>
-            <td><%= link_to certification.name, edit_certification_path(certification), remote: true %></td>
-            <td><%= link_to l(certification.created_at, format: :default), edit_certification_path(certification), remote: true %>
-            </td>
-            <td><%= link_to l(certification.updated_at, format: :default), edit_certification_path(certification), remote: true %>
-            </td>
+          <td><%= link_to certification.id, edit_certification_path(certification), remote: true %></td>
+          <td><%= link_to certification.name, edit_certification_path(certification), remote: true %></td>
+          <td><%= link_to l(certification.created_at, format: :default), edit_certification_path(certification), remote: true %>
+          </td>
+          <td><%= link_to l(certification.updated_at, format: :default), edit_certification_path(certification), remote: true %>
+          </td>
         </tr>
-        <% end %>
+      <% end %>
     </tbody>
-    <% end %>
+  <% end %>
 </table>

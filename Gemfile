@@ -68,6 +68,12 @@ group :development, :test do
 end
 
 group :development do
+  # format for ruby(*.rb) files
+  # command: bundle exec rufo app/*/*.rb and so on.
+  gem 'rufo'
+  # format for erb files
+  # command: bundle exec htmlbeautifier app/*/*.html.erb and so on.
+  gem 'htmlbeautifier'
   # letter_opener_web
   gem 'letter_opener_web', '~> 1.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

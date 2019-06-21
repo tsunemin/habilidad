@@ -32,7 +32,7 @@ class BusinessesController < ApplicationController
     respond_to do |format|
       if @business.save
         @businesses = Business.all
-        format.html { redirect_to @business, notice: 'Business was successfully created.' }
+        format.html { redirect_to @business, notice: "Business was successfully created." }
         format.json { render :show, status: :created, location: @business }
         format.js { @status = "success" }
       else
@@ -49,7 +49,7 @@ class BusinessesController < ApplicationController
     respond_to do |format|
       if @business.update(business_params)
         @businesses = Business.all
-        format.html { redirect_to @business, notice: 'Business was successfully updated.' }
+        format.html { redirect_to @business, notice: "Business was successfully updated." }
         format.json { render :show, status: :ok, location: @business }
         format.js { @status = "success" }
       else
@@ -66,20 +66,21 @@ class BusinessesController < ApplicationController
     @business.destroy
     @businesses = Business.all
     respond_to do |format|
-      format.html { redirect_to businesses_url, notice: 'Business was successfully destroyed.' }
+      format.html { redirect_to businesses_url, notice: "Business was successfully destroyed." }
       format.json { head :no_content }
       format.js { }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_business
-      @business = Business.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def business_params
-      params.require(:business).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_business
+    @business = Business.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def business_params
+    params.require(:business).permit(:name)
+  end
 end

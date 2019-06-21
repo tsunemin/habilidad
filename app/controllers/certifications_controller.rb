@@ -32,7 +32,7 @@ class CertificationsController < ApplicationController
     respond_to do |format|
       if @certification.save
         @certifications = Certification.all
-        format.html { redirect_to @certification, notice: 'Certification was successfully created.' }
+        format.html { redirect_to @certification, notice: "Certification was successfully created." }
         format.json { render :show, status: :created, location: @certification }
         format.js { @status = "success" }
       else
@@ -49,7 +49,7 @@ class CertificationsController < ApplicationController
     respond_to do |format|
       if @certification.update(certification_params)
         @certifications = Certification.all
-        format.html { redirect_to @certification, notice: 'Certification was successfully updated.' }
+        format.html { redirect_to @certification, notice: "Certification was successfully updated." }
         format.json { render :show, status: :ok, location: @certification }
         format.js { @status = "success" }
       else
@@ -66,20 +66,21 @@ class CertificationsController < ApplicationController
     @certification.destroy
     @certifications = Certification.all
     respond_to do |format|
-      format.html { redirect_to certifications_url, notice: 'Certification was successfully destroyed.' }
+      format.html { redirect_to certifications_url, notice: "Certification was successfully destroyed." }
       format.json { head :no_content }
       format.js { }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_certification
-      @certification = Certification.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def certification_params
-      params.require(:certification).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_certification
+    @certification = Certification.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def certification_params
+    params.require(:certification).permit(:name)
+  end
 end

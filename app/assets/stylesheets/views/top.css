@@ -1,33 +1,18 @@
 video {
+    background-size: cover;
+    bottom: 0;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
     position: fixed;
     right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
     width: auto;
-    height: auto;
     z-index: -100;
-    background-size: cover;
 }
 
-.relative-next {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
-
-.relative-next > .card {
-    max-width: 350px;
-    padding: 20px 20px;
-    background-color: rgba(200, 200, 200, 0.7);
-    margin: 0 auto 25px;
-    margin-top: 50px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+.forget-password {
+    margin-top: 10px;
+    text-align: end;
 }
 
 .img-habilidad {
@@ -36,27 +21,42 @@ video {
     margin-right: auto;
 }
 
+.relative-next {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.relative-next .card {
+    background-color: rgba(200, 200, 200, 0.7);
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    padding: 20px 20px;
+    -moz-border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
 .use-fontawesome {
+    text-decoration: inherit;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
-    text-decoration: inherit;
+}
+
+.use-fontawesome.btn.btn-dark {
+    margin-top: 10px;
+    width: 100%;
 }
 
 #label_sign_in {
     margin-bottom: 20px;
 }
 
-button.use-fontawesome.btn.btn-dark {
-    width: 100%;
-    margin-top: 10px;
-}
-
-input#remember_me + label {
+#remember_me + label {
     margin-bottom: initial;
-}
-
-.forget-password {
-    margin-top: 10px;
-    text-align: end;
 }

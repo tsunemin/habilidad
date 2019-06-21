@@ -1,26 +1,26 @@
-div.btn > a {
-    display: block;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    padding: 0.3em;
-    margin: 0.5em 0 0.5em 0;
-    color: #000000;
+.btn a {
+    background-color: #777777;
     border: 1px solid #000000;
     border-radius: 0.65em;
-    text-decoration: none;
+    color: #000000;
+    display: block;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.3em;
     text-align: center;
-    background-color: #777777;
+    text-decoration: none;
 }
 
-div.btn > a:hover {
+.btn a:hover {
     background-color: #999999;
 }
 
-p.message {
-    text-align: center;
+.message {
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
 }
 
-pre.message {
+.message {
     margin: initial;
     text-align: center;
 }

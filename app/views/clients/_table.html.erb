@@ -1,24 +1,24 @@
 <table id="clients_table" class="table table-hover">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th><%= Client.human_attribute_name(:name) %></th>
-            <th><%= Client.human_attribute_name(:commercial_distribution) %></th>
-            <th><%= Client.human_attribute_name(:created_at) %></th>
-            <th><%= Client.human_attribute_name(:updated_at) %></th>
-        </tr>
-    </thead>
-    <% if !@clients.blank? %>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><%= Client.human_attribute_name(:name) %></th>
+      <th><%= Client.human_attribute_name(:commercial_distribution) %></th>
+      <th><%= Client.human_attribute_name(:created_at) %></th>
+      <th><%= Client.human_attribute_name(:updated_at) %></th>
+    </tr>
+  </thead>
+  <% if !@clients.blank? %>
     <tbody>
-        <% @clients.each do |client| %>
+      <% @clients.each do |client| %>
         <tr>
-            <td><%= link_to client.id, edit_client_path(client), remote: true %></td>
-            <td><%= link_to client.name, edit_client_path(client), remote: true %></td>
-            <td><%= link_to client.commercial_distribution, edit_client_path(client), remote: true %></td>
-            <td><%= link_to l(client.created_at, format: :default), edit_client_path(client), remote: true %></td>
-            <td><%= link_to l(client.updated_at, format: :default), edit_client_path(client), remote: true %></td>
+          <td><%= link_to client.id, edit_client_path(client), remote: true %></td>
+          <td><%= link_to client.name, edit_client_path(client), remote: true %></td>
+          <td><%= link_to client.commercial_distribution, edit_client_path(client), remote: true %></td>
+          <td><%= link_to l(client.created_at, format: :default), edit_client_path(client), remote: true %></td>
+          <td><%= link_to l(client.updated_at, format: :default), edit_client_path(client), remote: true %></td>
         </tr>
-        <% end %>
+      <% end %>
     </tbody>
-    <% end %>
+  <% end %>
 </table>

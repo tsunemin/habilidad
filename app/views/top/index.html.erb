@@ -1,5 +1,5 @@
 <% if signed_in? %>
-    <%= @current_user.last_name %>
+  <%= render 'top/sign_in_top' %>
 <% else %>
-    <%= render 'top/top' %>
+  <%= render 'top/top' %>
 <% end %>

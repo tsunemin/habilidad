@@ -1,0 +1,114 @@
+<nav class="nav-menu">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-home" aria-selected="true">基本情報</a>
+    <a class="nav-item nav-link" id="nav-introduction-tab" data-toggle="tab" href="#nav-introduction" role="tab" aria-controls="nav-profile" aria-selected="false">自己PR</a>
+    <a class="nav-item nav-link" id="nav-skills-tab" data-toggle="tab" href="#nav-skills" role="tab" aria-controls="nav-skills" aria-selected="false">経験技術</a>
+    <a class="nav-item nav-link" id="nav-projects-tab" data-toggle="tab" href="#nav-projects" role="tab" aria-controls="nav-contact" aria-selected="false">プロジェクト</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <%= render 'top/form_personal_information'%>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <%= render 'top/form_educational_background' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-introduction" role="tabpanel" aria-labelledby="nav-introduction-tab">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <form>
+            <div class="card h-100">
+              <div class="card-header">
+                <p class="title">経験・知識・技能など</p>
+              </div>
+              <div class="card-body">
+                <textarea class="form-control" rows="28"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <form>
+            <div class="card h-100">
+              <div class="card-header">
+                <p class="title">自己PR</p>
+              </div>
+              <div class="card-body">
+                <textarea class="form-control" rows="28"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <form>
+            <div class="card h-100">
+              <div class="card-header">
+                <p class="title">プロジェクト管理経験</p>
+              </div>
+              <div class="card-body">
+                <textarea class="form-control" rows="28"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-skills" role="tabpanel" aria-labelledby="nav-skills-tab">...</div>
+  <div class="tab-pane fade" id="nav-projects" role="tabpanel" aria-labelledby="nav-projects-tab">...</div>
+</div>
+<style>
+  .nav-menu {
+      margin-bottom: .5rem;
+  }
+  
+  
+  .card-header {
+      padding: .1em .55em;
+      margin: initial;
+  }
+  .card-header .title {
+      font-size: .9em;
+      margin: initial;
+  }
+  
+  .form-group label {
+      font-size: .7rem;
+  }
+  
+  .form-control {
+      font-size: .7rem;
+  }
+  
+  .input-group .form-control {
+      border-radius: 0.25rem !important;
+  }
+  
+  .input-group input.form-control:first-child {
+      margin-right: 10px;
+  }
+  
+  div[class*="col-"] {
+      margin-bottom: 5px;
+      padding-right: 5px;
+      padding-left: 5px;
+  }
+  
+  .col-sm-4 {
+      margin-bottom: 5px;
+      padding-right: 5px;
+      padding-left: 5px;
+  }
+</style>
+<script>
+  $(function () {
+      $('#nav-profile-tab').addClass('active');
+  });
+</script>

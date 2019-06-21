@@ -1,9 +1,9 @@
 <% if @status == 'success' %>
-    $('#application_modal').modal('hide');
-    setTimeout(function(){
-        $('#application_modal').html('<%= j(render 'completed_sign_on') %>');
-        $('#application_modal').modal('show');
-    }, 500);
+  $('#application_modal').modal('hide');
+  setTimeout( function () {
+    $('#application_modal').html('<%= j(render 'completed_sign_on') %>');
+    $('#application_modal').modal('show');
+  }, 500);
 <% elsif @status == 'fail' %>
-    $('#sign_on_errors').html('<%= j(render 'layouts/error_messages', model: @temp_user) %>');
+  $('#sign_on_errors').html('<%= j(render 'layouts/error_messages', model: @temp_user) %>');
 <% end %>

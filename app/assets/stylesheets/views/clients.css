@@ -2,6 +2,14 @@
     margin-bottom: 10px;
 }
 
+.datetimepicker-input {
+    border-radius: 0.25rem !important;
+}
+
+.form-timestamp {
+    background-color: #e9ecef;
+}
+
 table tr a {
     display: block;
     width: 100%;
@@ -16,12 +24,4 @@ table tr a:hover {
     margin: auto;
     margin-right: 10px;
     margin-left: 10px;
-}
-
-.form-timestamp {
-    background-color: #e9ecef;
-}
-
-.datetimepicker-input {
-    border-radius: 0.25rem !important;
 }

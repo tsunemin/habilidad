@@ -32,7 +32,7 @@ class ClientsController < ApplicationController
     respond_to do |format|
       if @client.save
         @clients = Client.all
-        format.html { redirect_to @client, notice: 'Client was successfully created.' }
+        format.html { redirect_to @client, notice: "Client was successfully created." }
         format.json { render :show, status: :created, location: @client }
         format.js { @status = "success" }
       else
@@ -49,7 +49,7 @@ class ClientsController < ApplicationController
     respond_to do |format|
       if @client.update(client_params)
         @clients = Client.all
-        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+        format.html { redirect_to @client, notice: "Client was successfully updated." }
         format.json { render :show, status: :ok, location: @client }
         format.js { @status = "success" }
       else
@@ -66,20 +66,21 @@ class ClientsController < ApplicationController
     @client.destroy
     @clients = Client.all
     respond_to do |format|
-      format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
+      format.html { redirect_to clients_url, notice: "Client was successfully destroyed." }
       format.json { head :no_content }
       format.js { }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_client
-      @client = Client.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def client_params
-      params.require(:client).permit(:name, :commercial_distribution)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_client
+    @client = Client.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def client_params
+    params.require(:client).permit(:name, :commercial_distribution)
+  end
 end

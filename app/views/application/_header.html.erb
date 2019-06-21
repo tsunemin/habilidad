@@ -1,32 +1,32 @@
 <%= stylesheet_link_tag "commons/header.css", media: "all" %>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-    <span class="navbar-brand mb-0 h1"><%= link_to t('application.name'), top_path, class: "text-white" %></span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_nav"
+  <span class="navbar-brand mb-0 h1"><%= link_to t('application.name'), top_path, class: "text-white" %></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_nav"
         aria-controls="navbar_nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbar_nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-        </ul>
-        <ul class="navbar-nav">
-            <% if signed_in? %>
-                <li class="nav-item dropdown">
-                    <a id="dropdown_nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbar_nav" class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ul class="navbar-nav">
+      <% if signed_in? %>
+        <li class="nav-item dropdown">
+          <a id="dropdown_nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-users"></i> <%= t('dictionary.menu.title.admin') %>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                        <%= link_to t('businesses.index.title'), businesses_path, id: "businesses_nav", class: "dropdown-item-text" %>
-                        <%= link_to t('clients.index.title'), clients_path, id: "clients_nav", class: "dropdown-item-text" %>
-                        <%= link_to t('certifications.index.title'), certifications_path, id: "certifications_nav", class: "dropdown-item-text" %>
-                    </div>
-                </li>
-            <% end %>
-        </ul>
-        <% if signed_in? %>
-            <%= link_to 'sign out', { controller: "application", action: "sign_out" }, local: true, class: "btn btn-dark btn-outline-light" %>
-        <% else %>
-            <%= link_to t('dictionary.button.sign_on'), { controller: "top", action: "sign_on" } ,remote: true, class: "btn btn-dark btn-outline-light" %>
-        <% end %>
-    </div>
+            <i class="fa fa-users"></i> <%= t('dictionary.menu.title.admin') %>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
+            <%= link_to t('businesses.index.title'), businesses_path, id: "businesses_nav", class: "dropdown-item-text" %>
+            <%= link_to t('clients.index.title'), clients_path, id: "clients_nav", class: "dropdown-item-text" %>
+            <%= link_to t('certifications.index.title'), certifications_path, id: "certifications_nav", class: "dropdown-item-text" %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+    <% if signed_in? %>
+      <%= link_to 'sign out', { controller: "application", action: "sign_out" }, local: true, class: "btn btn-dark btn-outline-light" %>
+    <% else %>
+      <%= link_to t('dictionary.button.sign_on'), { controller: "top", action: "sign_on" } ,remote: true, class: "btn btn-dark btn-outline-light" %>
+    <% end %>
+  </div>
 </nav>

@@ -1,31 +1,31 @@
 <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title"><%= t('top.sign_on.title') %></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <%= form_with model: @temp_user, url: top_create_path, remote: true do |form| %>
-        <div class="modal-body">
-            <div id="sign_on_errors"></div>
-            <%= simple_format t('top.message.sign_on.guidance'), class: "small" %>
-            <div class="form-group">
-                <%= form.label :last_name, class: "form-control-label text-primary" %>
-                <%= form.text_field :last_name, placeholder: t('top.sign_on.form.last_name.placeholder'), class: "form-control" %>
-            </div>
-            <div class="form-group">
-                <%= form.label :first_name, class: "form-control-label text-primary" %>
-                <%= form.text_field :first_name, placeholder: t('top.sign_on.form.first_name.placeholder'), class: "form-control" %>
-            </div>
-            <div class="form-group">
-                <%= form.label :mail_address, class: "form-control-label text-primary" %>
-                <%= form.text_field :mail_address, placeholder: t('top.sign_on.form.mail_address.placeholder'), class: "form-control" %>
-            </div>
-        </div>
-        <div class="modal-footer actions">
-            <%= form.submit t('top.sign_on.form.submit'), class: "btn btn-primary" %>
-        </div>
-        <% end %>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"><%= t('top.sign_on.title') %></h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
+    <%= form_with model: @temp_user, url: top_create_path, remote: true do |form| %>
+      <div class="modal-body">
+        <div id="sign_on_errors"></div>
+        <%= simple_format t('top.message.sign_on.guidance'), class: "small" %>
+        <div class="form-group">
+          <%= form.label :last_name, class: "form-control-label text-primary" %>
+          <%= form.text_field :last_name, placeholder: t('top.sign_on.form.last_name.placeholder'), class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :first_name, class: "form-control-label text-primary" %>
+          <%= form.text_field :first_name, placeholder: t('top.sign_on.form.first_name.placeholder'), class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :mail_address, class: "form-control-label text-primary" %>
+          <%= form.text_field :mail_address, placeholder: t('top.sign_on.form.mail_address.placeholder'), class: "form-control" %>
+        </div>
+      </div>
+      <div class="modal-footer actions">
+        <%= form.submit t('top.sign_on.form.submit'), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
 </div>

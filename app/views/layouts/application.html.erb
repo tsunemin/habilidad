@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title><%= t('application.header') %></title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-  <%= javascript_include_tag "commons/commons.js" %>
-  <%= stylesheet_link_tag "commons/commons.css", media: "all" %>
-</head>
-
-<body>
-  <%= render 'header' %>
-  <div class="yield">
-    <%= yield %>
-    <div id="application_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
-  </div>
-  <%= render 'footer' %>
-</body>
-
+  <head>
+    <title><%= t('application.header') %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag() %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "commons/commons.js" %>
+    <%= stylesheet_link_tag "commons/commons.css", media: "all" %>
+  </head>
+  <body>
+    <%= render 'header' %>
+    <div class="yield">
+      <%= yield %>
+      <div id="application_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+    </div>
+    <%= render 'footer' %>
+  </body>
 </html>
